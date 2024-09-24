@@ -3,7 +3,7 @@ A pipeline for text processing, training a classifier for text classification, t
 
 ### Summary of the project
 - This project is about natural language processing of Disaster-Response messages and to categorize them with the help of a Random Forest Classifier. 
-Further this project is about exending a web app which can be hosted localy to have an interface to use the trained model to categorize messages into 36 classes.
+Further this project is about extending a web app which can be hosted localy to have an interface to use the trained model to categorize messages into 36 classes.
 
 ### How to run the Python scripts
  Run in a command prompt 
