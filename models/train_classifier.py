@@ -3,6 +3,7 @@ import nltk
 nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 from nltk.tokenize import sent_tokenize
+from nltk.stem import WordNetLemmatizer
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -51,14 +52,24 @@ def tokenize(text):
 
 def build_model():
     """
-    Create a pipeline to tokenize and to create a random forest classifier
+    Create a pipeline to tokenize and to create a random forest classifier.
+    As well as specify a grid search for parameter optimization of the classifier.
     
     """
     pipeline = Pipeline([
     ('tfidf', TfidfVectorizer(tokenizer=tokenize ,max_df=0.95, min_df=5)),  # Convert text to numerical features
     ('clf', MultiOutputClassifier(RandomForestClassifier(max_depth=None, n_estimators=100)))  # Multi-output classification
     ])
-    return pipeline
+
+    parameters = {
+    'clf__estimator__n_estimators': [50, 100],  # Number of trees in RandomForest
+    'clf__estimator__max_depth': [10, None]  # Maximum depth of trees
+    }
+
+    grid_search = GridSearchCV(pipeline, parameters, cv=2, verbose=3, n_jobs=-1)
+    
+
+    return grid_search
 
 
 def evaluate_model(model, X_test, Y_test):
