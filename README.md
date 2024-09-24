@@ -1,9 +1,5 @@
 # Disaster-Response-Classifier
-A pipeline for text processing, training a classifier for text classification, to store a model and a webapp to calssify Disaster Response text into categories.
-
-### Summary of the project
-- This project is about natural language processing of Disaster-Response messages and to categorize them with the help of a Random Forest Classifier. 
-Further this project is about extending a web app which can be hosted localy to have an interface to use the trained model to categorize messages into 36 classes.
+This project is about natural language processing of Disaster-Response messages and to categorize them with the help of a Random Forest Classifier. It helps people or organization in an event of a disasterto to classify emergency messages into 36 different categories. The project contains a pipeline for text processing, training a classifier for text classification, to store a model and a webapp to calssify Disaster Response text into categories.
 
 ### How to run the Python scripts
  Run in a command prompt 
