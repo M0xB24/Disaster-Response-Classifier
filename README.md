@@ -11,7 +11,7 @@ Further this project is about exending a web app which can be hosted localy to h
 - train_classifier.py data/DisasterResponse.db models/classifier.pkl
 
 ### How to run the web app 
-1. Unzip disaster_response_pipeline_project.zip
+1. Unzip disaster_response_pipeline_project.zip or look into the disaster_response_pipeline_project folder.
 2. Run the following commands in the project's root directory to set up your database and model in a commad prompt.
 
     - To run ETL pipeline that cleans data and stores in database
