@@ -67,7 +67,7 @@ def index():
                     'title': "Genre"
                 }
             }
-        }
+        },
 
         {
             # Second diagram: messages per category
