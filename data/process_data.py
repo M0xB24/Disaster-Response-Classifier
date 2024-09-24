@@ -42,7 +42,8 @@ def clean_data(df):
     
     """
     df_no_duplicates = df.drop_duplicates()
-    return df_no_duplicates
+    df_cleaned = df_no_duplicates[df_no_duplicates['related'] != 2]
+    return df_cleaned
 
 
 
