@@ -7,8 +7,7 @@ This project is about natural language processing of Disaster-Response messages 
 - train_classifier.py data/DisasterResponse.db models/classifier.pkl
 
 ### How to run the web app 
-1. Unzip disaster_response_pipeline_project.zip or look into the disaster_response_pipeline_project folder.
-2. Run the following commands in the project's root directory to set up your database and model in a commad prompt.
+1. Run the following commands in the project's root directory to set up your database and model in a commad prompt.
 
     - To run ETL pipeline that cleans data and stores in database
         `.../process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
@@ -19,24 +18,20 @@ This project is about natural language processing of Disaster-Response messages 
 
 
 ### Files in the repository
+Folder app
+- run.py
+Folder model
+- train_classifier.py
+Folder data
+- process_data.py
+- messages.csv
+- categories.csv
 
 Jupyter Notebooks as py and html
 - ETL Pipeline Preparation.py
 - ETL Pipeline Preparation.html
 - ML Pipeline Preparation.py
 - ML Pipeline Preparation.html
-
-Python Scripts which are used in the web app
-- process_data.py
-- train_classifier.py
-
-Data Source
-- messages.csv
-- categories.csv
-
-Wepp app 
-- disaster_response_pipeline_project folder
-
 
 
 ### Libraries which are used
