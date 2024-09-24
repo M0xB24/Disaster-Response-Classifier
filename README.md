@@ -20,8 +20,10 @@ This project is about natural language processing of Disaster-Response messages 
 ### Files in the repository
 Folder app
 - run.py
+
 Folder model
 - train_classifier.py
+  
 Folder data
 - process_data.py
 - messages.csv
