@@ -101,11 +101,15 @@ def index():
 @app.route('/go')
 def go():
     # save user input in query
-    query = request.args.get('query', '') 
-
-    # use model to predict classification for query
-    classification_labels = model.predict([query])[0]
+    query = request.args.get('query', '')
+# Tokenize the user input
+    tokenized_query = tokenize(query)
+    
+    # use model to predict classification for tokenized query
+    classification_labels = model.predict([' '.join(tokenized_query)])[0]  # Join tokens back to a string for model input
+    print(classification_labels)
     classification_results = dict(zip(df.columns[4:], classification_labels))
+    print(classification_results)
 
     # This will render the go.html Please see that file. 
     return render_template(
@@ -116,7 +120,7 @@ def go():
 
 
 def main():
-    app.run(host='0.0.0.0', port=3001, debug=True)
+    app.run(host='0.0.0.0', port=3000, debug=True)
 
 
 if __name__ == '__main__':
