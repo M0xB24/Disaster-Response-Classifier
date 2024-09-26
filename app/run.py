@@ -107,9 +107,9 @@ def go():
     
     # use model to predict classification for tokenized query
     classification_labels = model.predict([' '.join(tokenized_query)])[0]  # Join tokens back to a string for model input
-    print(classification_labels)
+    #print(classification_labels)
     classification_results = dict(zip(df.columns[4:], classification_labels))
-    print(classification_results)
+    #print(classification_results)
 
     # This will render the go.html Please see that file. 
     return render_template(
@@ -117,7 +117,7 @@ def go():
         query=query,
         classification_result=classification_results
     )
-
+    
 
 def main():
     app.run(host='0.0.0.0', port=3000, debug=True)
